@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Jenna Orr</title>
+    <meta name="description" content="About Jenna Orr, Software Developer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .photo-frame {
+            position: relative;
+            border: 15px solid #F5F5F0;
+            box-shadow: 8px 8px 0 #E8E3D5;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .photo-frame::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: 30px;
+            bottom: 30px;
+            border: 1px solid #D8C7B5;
+            z-index: -1;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D8C7B5, transparent);
+        }
+    </style>
+</head>
+<body class="bg-beige text-dark font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-beige z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold">Jenna Orr</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="about.html" class="text-accent font-medium">About</a>
+                    <a href="experience.html" class="hover:text-accent transition duration-300">Experience</a>
+                    <a href="contact.html" class="hover:text-accent transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 pb-16">
+        <div class="container mx-auto px-6">
+            <!-- Hero Section -->
+            <section class="py-12 md:py-16">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-12 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">Jenna Orr</h1>
+                        <h2 class="text-2xl md:text-3xl font-medium mb-6 text-accent">Software Developer</h2>
+                        <p class="text-lg leading-relaxed mb-8">
+                            Passionate software developer with expertise in creating scalable, efficient applications. 
+                            Specializing in full-stack development with a focus on clean architecture and intuitive user experiences. 
+                            Committed to continuous learning and applying cutting-edge technologies to solve real-world problems.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="photo-frame">
+                            <!-- Replace with your actual photo -->
+                            <img src="https://picsum.photos/400/500?random=3" alt="Jenna Orr" class="w-full max-w-md">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider my-12"></div>
+
+            <!-- Education Section -->
+            <section class="py-12">
+                <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+                <div class="max-w-3xl mx-auto bg-tan p-8 shadow-sm">
+                    <div class="flex items-start mb-6">
+                        <div class="mr-6">
+                            <div class="w-12 h-12 bg-accent flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-xl text-beige"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Arizona State University</h3>
+                            <p class="text-lg font-medium mb-1">B.S. in Computer Science</p>
+                            <p class="text-gray-600 mb-2">2019 - 2023</p>
+                            <p class="text-gray-700">
+                                Graduated with honors, focusing on software engineering principles, algorithms, 
+                                and data structures. Completed coursework in web development, machine learning, 
+                                and database systems. Active participant in women in tech organizations and hackathons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-tan py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Jenna Orr. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Scroll animations
+        ScrollReveal().reveal('.photo-frame', {
+            delay: 300,
+            distance: '50px',
+            origin: 'right',
+            duration: 800
+        });
+
+        ScrollReveal().reveal('h1, h2', {
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            duration: 800
+        });
+
+        ScrollReveal().reveal('p', {
+            delay: 400,
+            distance: '10px',
+            origin: 'bottom',
+            duration: 800,
+            interval: 100
+        });
+    </script>
+</body>
+</html>
