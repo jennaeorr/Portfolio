@@ -15,6 +15,18 @@
     overflow-x: hidden;
   }
 
+  /* Subtle texture background */
+  body::before {
+    content: '';
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background-image: 
+      linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   /* Hero Section */
   .hero-bg {
     background: linear-gradient(135deg, #FDF8F2 0%, #FAF2E5 100%);
@@ -22,6 +34,7 @@
     padding: 3rem;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(255,255,255,0.2);
   }
 
   .photo-frame {
@@ -48,6 +61,9 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 4rem 0;
+    background: linear-gradient(135deg, #FDF8F2 0%, #FAF2E5 100%);
+    border-radius: 16px;
+    box-shadow: inset 0 0 40px rgba(255,255,255,0.15);
   }
 
   .timeline-line {
