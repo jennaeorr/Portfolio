@@ -84,16 +84,22 @@
   @keyframes shine { 0%{background-position:-200% 0;} 100%{background-position:200% 0;} }
 
   .hero-line {
-    opacity:0;
-    transform: translateY(20px) scale(0.95);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    font-family: 'Raleway', sans-serif;
-    text-align:center;
-  }
-  .hero-line.active {
-    opacity:1;
-    transform: translateY(0) scale(1);
-  }
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(30px);
+  transition: 
+    opacity 1.8s ease, 
+    filter 1.8s ease, 
+    transform 1.8s ease;
+  will-change: opacity, transform, filter;
+}
+
+.hero-line.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
 
   .hero-subtitle {
     font-family: 'Raleway', sans-serif;
@@ -263,11 +269,9 @@ const animateHero = () => {
 
   heroLines.forEach((line, i) => {
     const top = line.getBoundingClientRect().top;
-    if(top < trigger && top > 0){
-      setTimeout(()=>line.classList.add('active'), i*200);
-    } else {
-      line.classList.remove('active');
-    }
+    if (top < trigger) {
+  setTimeout(() => line.classList.add('active'), i * 250);
+}
   });
 
   const photoTop = heroPhoto.getBoundingClientRect().top;
