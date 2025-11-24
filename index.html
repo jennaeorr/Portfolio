@@ -127,46 +127,56 @@
 
   .section-divider { height:1px; background: linear-gradient(90deg,transparent,#A89D92,transparent); margin:3rem 0; }
 
-  /* --- Timeline --- */
-  .timeline-container {
-    position:relative;
+  /* --- Education Section --- */
+  .education-section {
     max-width:900px;
     margin:0 auto;
-    padding:4rem 0;
-    background: linear-gradient(135deg, #F9F0EA 0%, #DDDAD3 100%);
-    border-radius:16px;
-    box-shadow: inset 0 0 40px rgba(255,255,255,0.15);
+    padding:4rem 1rem 6rem 1rem;
   }
-  .timeline-line {
-    position:absolute;
-    left:50%;
-    top:0;
-    transform:translateX(-50%);
-    width:4px;
-    height:0;
-    background-color:#A89D92;
-    transition: height 1s ease-out;
-  }
-  .timeline-item {
-    position:relative;
-    width:50%;
-    padding:2rem 1rem;
-    opacity:0;
-    transition: all 0.8s cubic-bezier(0.65,0,0.35,1);
-  }
-  .timeline-item.left { left:0; text-align:right; padding-right:3rem; transform: translateX(-50px); }
-  .timeline-item.right { left:50%; text-align:left; padding-left:3rem; transform: translateX(50px); }
-  .timeline-item.active { opacity:1; transform: translateX(0); animation: bounceIn 0.6s ease; }
-  @keyframes bounceIn { 0%{transform:translateY(30px);opacity:0;} 60%{transform:translateY(-10px);opacity:1;} 80%{transform:translateY(5px);} 100%{transform:translateY(0);} }
-
-  .timeline-content {
+  .education-card {
     background: rgba(221,218,211,0.95);
-    padding:1rem 1.5rem;
+    padding:2.5rem 2rem;
     border-radius:12px;
     box-shadow:0 10px 20px rgba(0,0,0,0.06);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom:2rem;
   }
-  .timeline-content:hover { transform:translateY(-4px); box-shadow:0 14px 28px rgba(0,0,0,0.08); }
+  
+  .education-name {
+	  font-family: 'Amatic SC', cursive !important;
+	  font-size: 6rem;
+	  font-weight: 700;
+	  line-height: 1;
+	  letter-spacing: -1px;
+	  background: linear-gradient(90deg, #9E8472, #DDDAD3, #9E8472);
+	  background-size: 200% 100%;
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  animation: shine 3s ease-in-out infinite;
+	  display: block;
+	  text-align: center;
+	  position: relative;
+	  margin: 0 auto 2rem auto;
+	  z-index: 1;
+	}
+
+	.education-name::after {
+	  content: '';
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 120%;
+	  height: 60%;
+	  background: rgba(255, 240, 220, 0.2);
+	  filter: blur(40px);
+	  z-index: -1;
+	  border-radius: 50%;
+	}
+
+	@keyframes shine {
+	  0% { background-position: -200% 0; }
+	  100% { background-position: 200% 0; }
+	}
 
   @media(min-width:768px){
     .hero-bg{flex-direction:row; justify-content:space-between;}
@@ -200,23 +210,18 @@
         <p>
           Hi, I’m Jenna — a software developer with a strong technical foundation, a passion for clean, intuitive design, and a genuine love for the outdoors.
         </p>
-
         <p>
           I earned my Bachelor of Science in Computer Science from Arizona State University with a 4.0 GPA, along with a minor in Business. I’m drawn to roles in front-end and back-end development, web development, and technical business or finance positions where I can combine analytical thinking with creativity.
         </p>
-
         <p>
           As a military spouse, remote work is essential for me, and I’m seeking opportunities that allow me to contribute meaningfully while supporting the demands of military life. I bring strong organization, adaptability, and leadership to every project I take on.
         </p>
-
         <p>
           I’ve always balanced both the analytical and the creative. I grew up playing music and creating artwork, and I still enjoy staying crafty and hands-on. That blend of creativity and problem-solving shapes the way I approach development and collaboration.
         </p>
-
         <p>
           Outside of work, I’m committed to staying active — from working out and practicing yoga to traveling, hiking, skiing, and biking. Exploring new places and spending time outdoors is a big part of who I am, and I’m especially inspired by projects that help others experience and appreciate nature.
         </p>
-
         <p>
           My goal is to apply my skills and creativity to work that makes a meaningful impact and encourages exploration, innovation, and connection with the outdoors.
         </p>
@@ -231,23 +236,22 @@
 
   <div class="section-divider"></div>
 
-  <!-- Timeline Section -->
-  <section class="education-section mt-20 mb-20">
-    <div class="max-w-4xl mx-auto bg-[#F9F0EA] rounded-2xl shadow-lg p-10 border border-[#E2D8D0]">
-
-      <h2 class="text-4xl font-semibold text-center mb-8 hero-line">Education</h2>
+  <!-- Education Section -->
+  <section class="education-section">
+    <div class="education-card">
+      <h2 class="education-name">Education</h2>
 
       <div class="flex flex-col md:flex-row md:items-start gap-10">
 
         <!-- Left: Degree Info -->
-        <div class="md:w-1/3 space-y-2 hero-line">
+        <div class="md:w-1/3 space-y-2">
           <p class="text-xl font-semibold text-[#4C392D]">2019 – 2023</p>
           <p class="text-2xl font-bold text-[#4C392D]">B.S. Computer Science</p>
           <p class="text-lg text-[#9E8472]">Arizona State University</p>
         </div>
 
         <!-- Right: Description -->
-        <div class="md:w-2/3 space-y-6 hero-line">
+        <div class="md:w-2/3 space-y-6">
           <p>
             Throughout my four years at Arizona State University Tempe, I earned a Bachelor’s degree in Computer Science and a minor in Business while maintaining a 4.0 GPA. I was awarded Dean’s List every semester and graduated with the Moeur Award for outstanding academic achievement.
           </p>
@@ -273,7 +277,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -289,9 +292,6 @@
 const heroLines = document.querySelectorAll('.hero-line');
 const heroPhoto = document.getElementById('hero-photo');
 const heroFrame = heroPhoto.querySelector('.photo-frame');
-const timelineItems = document.querySelectorAll('.timeline-item');
-const timelineLine = document.getElementById('timeline-line');
-const timelineContainer = document.querySelector('.timeline-container');
 
 const animateHero = () => {
   const trigger = window.innerHeight * 0.85;
@@ -307,24 +307,6 @@ const animateHero = () => {
   } else {
     heroFrame.classList.remove('pulse');
   }
-
-  const timelineTop = timelineItems[0]?.getBoundingClientRect().top + window.scrollY || 0;
-  const timelineBottom = timelineItems[timelineItems.length-1]?.getBoundingClientRect().bottom + window.scrollY || 0;
-  const scrollBottom = window.scrollY + window.innerHeight;
-  if(scrollBottom > timelineTop){
-    const totalHeight = timelineBottom - timelineTop;
-    const visible = Math.min(totalHeight, scrollBottom - timelineTop);
-    if(timelineLine) timelineLine.style.height = visible+'px';
-  }
-
-  const offsetX = Math.min(Math.max((window.scrollY - timelineTop)/30,-10),10);
-  if(timelineContainer) timelineContainer.style.transform = `translateX(${offsetX}px)`;
-
-  timelineItems.forEach(item=>{
-    const top = item.getBoundingClientRect().top;
-    if(top < window.innerHeight * 0.85 && top > 0) item.classList.add('active');
-    else item.classList.remove('active');
-  });
 };
 
 window.addEventListener('scroll', animateHero);
