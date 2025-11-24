@@ -4,135 +4,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience | Jenna Orr</title>
-<meta name="description" content="Experience of Jenna Orr, Software Developer">
+<meta name="description" content="Jenna Orr's professional experience">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Raleway:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/a2d9d5a64b.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
 <style>
-  body { font-family:'Inter',sans-serif; background:#F9F0EA; color:#4C392D; overflow-x:hidden; }
-  body::before { content:''; position:fixed; top:0; left:0; right:0; bottom:0;
-    background-image: linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent);
-    background-size:20px 20px; pointer-events:none; z-index:-1;
+  body {
+    background: #F9F0EA;
+    color: #4C392D;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  nav { background: #DDDAD3; }
+  nav a { transition: color 0.3s; }
+  nav a:hover { color: #9E8472; }
+
+  .experience-card {
+    border-left: 4px solid #A89D92;
+    background: rgba(221,218,211,0.95);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+  }
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   }
 
-  nav { background:#DDDAD3; }
-  nav a { transition:color 0.3s; }
-  nav a:hover { color:#9E8472; }
-
-  #mobile-menu { display:none; }
-
-  .hero-bg { background: linear-gradient(135deg, #F9F0EA 0%, #DDDAD3 100%);
-    border-radius: 20px; padding: 4rem 2rem 5rem 2rem; margin:6rem 2rem 3rem 2rem;
-    overflow:hidden; display:flex; flex-direction:column; align-items:center; gap:2rem; position:relative;
-    box-shadow: inset 0 0 60px rgba(255,255,255,0.2), 0 15px 40px rgba(0,0,0,0.06);
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #A89D92, transparent);
   }
 
-  .hero-bg::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity:0.02; pointer-events:none;
-  }
+  .text-accent { color: #9E8472; }
 
-  .hero-name { font-family: 'Amatic SC', cursive !important; font-size: 6rem; font-weight: 700;
-    line-height: 1; letter-spacing: -1px; background: linear-gradient(90deg, #9E8472, #DDDAD3, #9E8472);
-    background-size: 200% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    animation: shine 3s ease-in-out infinite; margin-bottom: 0.5rem; text-align:center;
-  }
-  @keyframes shine { 0%{background-position:-200% 0;} 100%{background-position:200% 0;} }
+  footer { background: #DDDAD3; }
 
-  .hero-line { opacity:0; filter:blur(8px); transform: translateY(30px); transition:opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease; }
-  .hero-line.active { opacity:1; filter:blur(0); transform:translateY(0); }
-
-  .hero-subtitle { font-family:'Raleway',sans-serif; font-size:2rem; font-weight:600; color:#9E8472; }
-  .hero-text { font-size:1.125rem; line-height:1.7; max-width:600px; text-align:center; margin-top:1rem; }
-
-  .photo-frame { border-radius:20px; overflow:hidden; border:12px solid rgba(221,218,211,0.85); box-shadow:0 15px 50px rgba(0,0,0,0.06); transition: transform 2s ease; }
-  .photo-frame.pulse { animation: float 6s ease-in-out infinite alternate; }
-  @keyframes float { 0%{transform:translateY(0);} 50%{transform:translateY(-12px);} 100%{transform:translateY(0);} }
-
-  .section-divider { height:1px; background: linear-gradient(90deg,transparent,#A89D92,transparent); margin:3rem 0; }
-
-  .experience-card { background: rgba(221,218,211,0.95); border-radius:12px; padding:1.5rem; margin-bottom:2rem; box-shadow:0 10px 20px rgba(0,0,0,0.06); transition: transform 0.5s ease, box-shadow 0.5s ease; }
-  .experience-card:hover { transform: translateY(-4px); box-shadow:0 14px 28px rgba(0,0,0,0.08); }
-
+  .glightbox img { cursor: pointer; }
 </style>
 </head>
-
 <body>
+
+<!-- Navigation -->
 <nav class="fixed top-0 left-0 right-0 z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="index.html" class="text-xl font-semibold">Jenna Orr</a>
     <div class="hidden md:flex space-x-8">
-      <a href="index.html" class="hover:text-accent transition">About</a>
+      <a href="about.html" class="hover:text-accent transition duration-300">About</a>
       <a href="experience.html" class="text-accent font-medium">Experience</a>
-      <a href="contact.html" class="hover:text-accent transition">Contact</a>
+      <a href="contact.html" class="hover:text-accent transition duration-300">Contact</a>
     </div>
-    <button id="menu-btn" class="md:hidden focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
-  </div>
-  <div id="mobile-menu" class="md:hidden bg-[#DDDAD3] px-6 pb-4 flex flex-col space-y-4">
-    <a href="index.html">About</a>
-    <a href="experience.html" class="text-accent font-medium">Experience</a>
-    <a href="contact.html">Contact</a>
+    <button class="md:hidden focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
   </div>
 </nav>
 
 <main class="pt-24 pb-16">
-  <section class="hero-bg">
-    <h1 class="hero-line hero-name">Experience</h1>
-    <h2 class="hero-line hero-subtitle">Professional Background</h2>
-    <div class="hero-line hero-text space-y-6">
-      <p>Here are some of my key experiences and roles that shaped my career as a software developer:</p>
-    </div>
-  </section>
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Professional Experience</h1>
 
-  <div class="section-divider"></div>
+    <!-- Lin & Associates -->
+    <section class="mb-20 scroll-reveal">
+      <div class="experience-card p-8 mb-8">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Lin & Associates</h2>
+          <span class="text-accent font-medium">Software Developer | 2021-Present</span>
+        </div>
+        <p class="mb-6">
+          At Lin & Associates, a modern control system consulting company, I contribute to the full software development lifecycle—from research and design through deployment and support. I design, build, and maintain applications using C#.NET, WPF, InstallShield, JavaScript, HTML/CSS, .NET Core, VBScript, and VBA, collaborating closely with customers to deliver tailored technical solutions. I utilize GitKraken, Bitbucket, Jira, and Confluence to manage agile workflows, version control, sprint tasks, and product requirements.
+          <br><br>
+          My focus includes enhancing ALTIUS on PI Vision, modifying HMI Converters, coding new features, and improving usability, functionality, and performance. I also contribute to ALTIUS Hi-Performance HMI Solutions and support DELTUM-XMC for advanced process control, ensuring optimized operator workflows and improved system performance.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+          <a href="LNA2.png" class="glightbox">
+            <img src="LNA2.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg">
+          </a>
+          <a href="LNA.png" class="glightbox">
+            <img src="LNA.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg shadow-md">
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <section class="max-w-4xl mx-auto space-y-6">
-    <div class="experience-card">
-      <h3 class="font-bold text-xl">Front-End Developer | XYZ Corp</h3>
-      <p class="text-sm text-[#9E8472]">2023 – Present</p>
-      <ul class="list-disc pl-5 mt-2 space-y-1">
-        <li>Developed responsive web applications using React and TailwindCSS.</li>
-        <li>Implemented UI features with a focus on accessibility and performance.</li>
-        <li>Collaborated with back-end developers to integrate REST APIs.</li>
-      </ul>
-    </div>
+    <div class="section-divider my-12"></div>
 
-    <div class="experience-card">
-      <h3 class="font-bold text-xl">Software Engineering Intern | ABC Solutions</h3>
-      <p class="text-sm text-[#9E8472]">2022 – 2023</p>
-      <ul class="list-disc pl-5 mt-2 space-y-1">
-        <li>Assisted in building automated QA scripts for web applications.</li>
-        <li>Worked with team to optimize SQL database queries and reporting.</li>
-        <li>Participated in Agile sprints and code reviews.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Capstone Project -->
+    <section class="mb-20 scroll-reveal">
+      <div class="experience-card p-8 mb-8">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Capstone Project</h2>
+          <span class="text-accent font-medium">Arizona State University | 2023</span>
+        </div>
+        <p class="mb-6">
+          For my year-long capstone at Arizona State University, I worked with Medecipher Solutions, improving nurse staffing decision support through dashboards, visualizations, and data-driven tables. I implemented Rapid ROI tables, nurse characteristic tables with pop-ups and bulk-upload functionality, and D3.js-powered charts for staffing forecasts and performance metrics.
+          <br><br>
+          Technologies used: Angular, D3.js, HTML/CSS, JSON, VSCode, Docker, Node.js, Taiga, AWS.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+          <figure class="flex flex-col items-center">
+            <a href="medecipher_figure1.png" class="glightbox">
+              <img src="medecipher_figure1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+            </a>
+            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.0</figcaption>
+          </figure>
 
+          <figure class="flex flex-col items-center">
+            <a href="medecipher_figure1.1.png" class="glightbox">
+              <img src="medecipher_figure1.1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+            </a>
+            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.1</figcaption>
+          </figure>
+
+          <figure class="flex flex-col items-center">
+            <a href="medecipher_figure1.2.png" class="glightbox">
+              <img src="medecipher_figure1.2.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+            </a>
+            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.2</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider my-12"></div>
+
+    <!-- Dizpot -->
+    <section class="mb-20 scroll-reveal">
+      <div class="experience-card p-8 mb-8">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Dizpot</h2>
+          <span class="text-accent font-medium">Full-Stack Developer Intern | Summer 2021</span>
+        </div>
+        <p class="mb-6">
+          At Dizpot, I contributed to full-stack software solutions using MVC, PHP, MySQL, JavaScript, HTML/CSS, and Linux. Maintained WordPress e-commerce platform, implemented SEO improvements, performance optimizations, and design enhancements. Strengthened front-end/back-end development, testing, debugging, and deployment skills in a professional environment.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider my-12"></div>
+
+    <!-- PVUSD Women & Information Technology -->
+    <section class="scroll-reveal">
+      <div class="experience-card p-8">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">PVUSD Women & Information Technology</h2>
+          <span class="text-accent font-medium">Computer Science Intern | Summer 2018</span>
+        </div>
+        <p class="mb-6">
+          Partnered with Google employees to demonstrate Jamboards to educators, taught Bootstrap Algebra integration, explored Python and Java, and worked with Raspberry Pi hardware. Strengthened technical expertise and communication skills for diverse audiences.
+        </p>
+        <div class="flex justify-center">
+          <a href="PVUSD.png" class="glightbox">
+            <img src="PVUSD.png" alt="PVUSD WIT" class="w-full max-w-md h-auto object-contain rounded-lg">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </main>
 
-<footer class="bg-[#DDDAD3] py-8">
-  <div class="container mx-auto px-6 text-center">
+<footer class="py-8 text-center bg-[#DDDAD3]">
+  <div class="container mx-auto px-6">
     <p>&copy; 2025 Jenna Orr. All rights reserved.</p>
   </div>
 </footer>
 
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
-document.getElementById("menu-btn").addEventListener("click", () => {
-  const menu = document.getElementById("mobile-menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-});
-
-const heroLines = document.querySelectorAll('.hero-line');
-function animateHero() {
-  const trigger = window.innerHeight * 0.85;
-  heroLines.forEach((line, i) => {
-    if (line.getBoundingClientRect().top < trigger) {
-      setTimeout(() => line.classList.add('active'), i * 250);
-    }
+  ScrollReveal().reveal('.scroll-reveal', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    duration: 800,
+    interval: 100
   });
-}
-window.addEventListener('scroll', animateHero);
-window.addEventListener('load', animateHero);
+
+  const lightbox = GLightbox({ selector: '.glightbox' });
 </script>
 </body>
 </html>
