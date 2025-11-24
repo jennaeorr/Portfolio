@@ -6,7 +6,7 @@
     <title>Experience | Jenna Orr</title>
     <meta name="description" content="Jenna Orr's professional experience">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <style>
@@ -48,6 +48,44 @@
         .glightbox img {
             cursor: pointer;
         }
+
+        /* --- Glistening Text for Headings --- */
+        .hero-name {
+            font-family: 'Amatic SC', cursive;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #9E8472, #DDDAD3, #9E8472);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s ease-in-out infinite;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-name::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 60%;
+            background: rgba(255, 240, 220, 0.2);
+            filter: blur(40px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        @keyframes shine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
     </style>
 </head>
 <body>
@@ -70,7 +108,7 @@
 
     <main class="pt-20 pb-16">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Professional Experience</h1>
+            <h1 class="hero-name">Professional Experience</h1>
 
             <!-- Lin & Associates -->
             <section class="mb-20 scroll-reveal">
@@ -80,25 +118,24 @@
                         <span class="text-accent font-medium">Software Developer | 2021-Present</span>
                     </div>
                     <p class="mb-6">
-						At Lin & Associates, a modern control system consulting company, I contribute to the full software development lifecycle—from initial research and design through development, testing, deployment, and long-term support. I design, build, and maintain applications using C#.NET, WPF, InstallShield, JavaScript, HTML/CSS, .NET Core, VBScript, and VBA, collaborating closely with customers to deliver tailored technical solutions and clear documentation. I also utilize GitKraken, Bitbucket, Jira, and Confluence to manage agile workflows, version control, sprint tasks, and product requirements.
-						<br><br>
-						My primary focus is on enhancing ALTIUS on PI Vision, including modifying the HMI Converter, coding new features, and improving usability, functionality, and performance across the system. This work enables customers to convert existing DCS graphics into fully functional PI Vision displays while preserving the original layout, proportions, and underlying data, ensuring accurate and intuitive operator workflows.
-						<br><br>
-						I also contribute extensively to ALTIUS Hi-Performance HMI Solutions, a system designed to improve operator effectiveness through guided navigation, situational awareness, and rapid access to critical process information. My work spans a wide range of enhancements, from interface features like the three-tier navigation menu to advanced system improvements, optimizing operator workflows and reducing error potential.
-						<br><br>
-						Additionally, I support DELTUM-XMC, a model-less multivariable control technology that provides faster, lower-cost, and lower-maintenance process control compared to traditional model-based solutions. My contributions enhance system functionality and expand operator capabilities, improving overall performance.
-						<br><br>
-						Overall, my role at Lin & Associates combines deep technical expertise, problem-solving, and close collaboration with customers to deliver reliable, modern, and high-impact control system solutions.
-					</p>
+                        At Lin & Associates, a modern control system consulting company, I contribute to the full software development lifecycle—from initial research and design through development, testing, deployment, and long-term support. I design, build, and maintain applications using C#.NET, WPF, InstallShield, JavaScript, HTML/CSS, .NET Core, VBScript, and VBA, collaborating closely with customers to deliver tailored technical solutions and clear documentation. I also utilize GitKraken, Bitbucket, Jira, and Confluence to manage agile workflows, version control, sprint tasks, and product requirements.
+                        <br><br>
+                        My primary focus is on enhancing ALTIUS on PI Vision, including modifying the HMI Converter, coding new features, and improving usability, functionality, and performance across the system. This work enables customers to convert existing DCS graphics into fully functional PI Vision displays while preserving the original layout, proportions, and underlying data, ensuring accurate and intuitive operator workflows.
+                        <br><br>
+                        I also contribute extensively to ALTIUS Hi-Performance HMI Solutions, a system designed to improve operator effectiveness through guided navigation, situational awareness, and rapid access to critical process information. My work spans a wide range of enhancements, from interface features like the three-tier navigation menu to advanced system improvements, optimizing operator workflows and reducing error potential.
+                        <br><br>
+                        Additionally, I support DELTUM-XMC, a model-less multivariable control technology that provides faster, lower-cost, and lower-maintenance process control compared to traditional model-based solutions. My contributions enhance system functionality and expand operator capabilities, improving overall performance.
+                        <br><br>
+                        Overall, my role at Lin & Associates combines deep technical expertise, problem-solving, and close collaboration with customers to deliver reliable, modern, and high-impact control system solutions.
+                    </p>
                     <div class="flex flex-wrap justify-center gap-4 mb-6">
-					<div class="flex flex-wrap justify-center gap-4 mb-6">
-						<a href="LNA2.png" class="glightbox">
-							<img src="LNA2.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg">
-						</a>
-						<a href="LNA.png" class="glightbox">
-							<img src="LNA.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg shadow-md">
-						</a>
-					</div>
+                        <a href="LNA2.png" class="glightbox">
+                            <img src="LNA2.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg">
+                        </a>
+                        <a href="LNA.png" class="glightbox">
+                            <img src="LNA.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg shadow-md">
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -123,27 +160,27 @@
                         Throughout this project, I strengthened my skills in Angular, D3.js, HTML/CSS, JSON, VSCode, Docker, Node.js, Taiga, and AWS, while gaining experience in creating data-visualization-driven applications for real-world operational challenges.
                     </p>
                     <div class="flex flex-wrap justify-center gap-4 mb-6">
-						<figure class="flex flex-col items-center">
-							<a href="medecipher_figure1.png" class="glightbox">
-								<img src="medecipher_figure1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-							</a>
-							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.0</figcaption>
-						</figure>
+                        <figure class="flex flex-col items-center">
+                            <a href="medecipher_figure1.png" class="glightbox">
+                                <img src="medecipher_figure1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+                            </a>
+                            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.0</figcaption>
+                        </figure>
 
-						<figure class="flex flex-col items-center">
-							<a href="medecipher_figure1.1.png" class="glightbox">
-								<img src="medecipher_figure1.1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-							</a>
-							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.1</figcaption>
-						</figure>
+                        <figure class="flex flex-col items-center">
+                            <a href="medecipher_figure1.1.png" class="glightbox">
+                                <img src="medecipher_figure1.1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+                            </a>
+                            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.1</figcaption>
+                        </figure>
 
-						<figure class="flex flex-col items-center">
-							<a href="medecipher_figure1.2.png" class="glightbox">
-								<img src="medecipher_figure1.2.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-							</a>
-							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.2</figcaption>
-						</figure>
-					</div>
+                        <figure class="flex flex-col items-center">
+                            <a href="medecipher_figure1.2.png" class="glightbox">
+                                <img src="medecipher_figure1.2.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+                            </a>
+                            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.2</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
 
@@ -189,6 +226,7 @@
                     </div>
                 </div>
             </section>
+
         </div>
     </main>
 
