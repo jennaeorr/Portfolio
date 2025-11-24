@@ -6,7 +6,7 @@
     <title>Contact | Jenna Orr</title>
     <meta name="description" content="Contact Jenna Orr, Software Developer">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
@@ -44,6 +44,44 @@
         button:hover { opacity: 0.9; }
 
         footer { background: #DDDAD3; }
+
+        /* --- Glistening Heading --- */
+        .hero-name {
+            font-family: 'Amatic SC', cursive;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #9E8472, #DDDAD3, #9E8472);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s ease-in-out infinite;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-name::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 60%;
+            background: rgba(255, 240, 220, 0.2);
+            filter: blur(40px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        @keyframes shine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
     </style>
 </head>
 <body>
@@ -66,7 +104,9 @@
 
     <main class="pt-20 pb-16">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Get In Touch</h1>
+            <div class="flex justify-center mb-12">
+				<h1 class="hero-name">Get In Touch</h1>
+			</div>
 
             <div class="flex flex-col lg:flex-row gap-12">
                 <!-- Contact Info -->
