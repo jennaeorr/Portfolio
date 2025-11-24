@@ -1,186 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experience | Jenna Orr</title>
-<meta name="description" content="Jenna Orr's professional experience">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Jenna Orr</title>
+    <meta name="description" content="Jenna Orr's professional experience">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <style>
+        body {
+            background: #F9F0EA;
+            color: #4C392D;
+            font-family: 'Inter', sans-serif;
+        }
 
-<style>
-  body {
-    background: #F9F0EA;
-    color: #4C392D;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-  }
-  nav { background: #DDDAD3; }
-  nav a { transition: color 0.3s; }
-  nav a:hover { color: #9E8472; }
+        nav {
+            background: #DDDAD3;
+        }
+        nav a { transition: color 0.3s; }
+        nav a:hover { color: #9E8472; }
 
-  .experience-card {
-    border-left: 4px solid #A89D92;
-    background: rgba(221,218,211,0.95);
-    transition: all 0.3s ease;
-    border-radius: 12px;
-  }
-  .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  }
+        .experience-card {
+            border-left: 4px solid #A89D92;
+            background: rgba(221,218,211,0.95);
+            transition: all 0.3s ease;
+        }
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
 
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #A89D92, transparent);
-  }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #A89D92, transparent);
+        }
 
-  .text-accent { color: #9E8472; }
+        .text-accent {
+            color: #9E8472;
+        }
 
-  footer { background: #DDDAD3; }
+        footer {
+            background: #DDDAD3;
+        }
 
-  .glightbox img { cursor: pointer; }
-</style>
+        .glightbox img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 shadow-sm">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-semibold">Jenna Orr</a>
-    <div class="hidden md:flex space-x-8">
-      <a href="about.html" class="hover:text-accent transition duration-300">About</a>
-      <a href="experience.html" class="text-accent font-medium">Experience</a>
-      <a href="contact.html" class="hover:text-accent transition duration-300">Contact</a>
-    </div>
-    <button class="md:hidden focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
-  </div>
-</nav>
-
-<main class="pt-24 pb-16">
-  <div class="container mx-auto px-6">
-    <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Professional Experience</h1>
-
-    <!-- Lin & Associates -->
-    <section class="mb-20 scroll-reveal">
-      <div class="experience-card p-8 mb-8">
-        <div class="flex flex-col md:flex-row md:items-center mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Lin & Associates</h2>
-          <span class="text-accent font-medium">Software Developer | 2021-Present</span>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold">Jenna Orr</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-accent transition duration-300">About</a>
+                    <a href="experience.html" class="text-accent font-medium">Experience</a>
+                    <a href="contact.html" class="hover:text-accent transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
-        <p class="mb-6">
-          At Lin & Associates, a modern control system consulting company, I contribute to the full software development lifecycle—from research and design through deployment and support. I design, build, and maintain applications using C#.NET, WPF, InstallShield, JavaScript, HTML/CSS, .NET Core, VBScript, and VBA, collaborating closely with customers to deliver tailored technical solutions. I utilize GitKraken, Bitbucket, Jira, and Confluence to manage agile workflows, version control, sprint tasks, and product requirements.
-          <br><br>
-          My focus includes enhancing ALTIUS on PI Vision, modifying HMI Converters, coding new features, and improving usability, functionality, and performance. I also contribute to ALTIUS Hi-Performance HMI Solutions and support DELTUM-XMC for advanced process control, ensuring optimized operator workflows and improved system performance.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-6">
-          <a href="LNA2.png" class="glightbox">
-            <img src="LNA2.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg">
-          </a>
-          <a href="LNA.png" class="glightbox">
-            <img src="LNA.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg shadow-md">
-          </a>
+    </nav>
+
+    <main class="pt-20 pb-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center">Professional Experience</h1>
+
+            <!-- Lin & Associates -->
+            <section class="mb-20 scroll-reveal">
+                <div class="experience-card p-8 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Lin & Associates</h2>
+                        <span class="text-accent font-medium">Software Developer | 2021-Present</span>
+                    </div>
+                    <p class="mb-6">
+						At Lin & Associates, a modern control system consulting company, I contribute to the full software development lifecycle—from initial research and design through development, testing, deployment, and long-term support. I design, build, and maintain applications using C#.NET, WPF, InstallShield, JavaScript, HTML/CSS, .NET Core, VBScript, and VBA, collaborating closely with customers to deliver tailored technical solutions and clear documentation. I also utilize GitKraken, Bitbucket, Jira, and Confluence to manage agile workflows, version control, sprint tasks, and product requirements.
+						<br><br>
+						My primary focus is on enhancing ALTIUS on PI Vision, including modifying the HMI Converter, coding new features, and improving usability, functionality, and performance across the system. This work enables customers to convert existing DCS graphics into fully functional PI Vision displays while preserving the original layout, proportions, and underlying data, ensuring accurate and intuitive operator workflows.
+						<br><br>
+						I also contribute extensively to ALTIUS Hi-Performance HMI Solutions, a system designed to improve operator effectiveness through guided navigation, situational awareness, and rapid access to critical process information. My work spans a wide range of enhancements, from interface features like the three-tier navigation menu to advanced system improvements, optimizing operator workflows and reducing error potential.
+						<br><br>
+						Additionally, I support DELTUM-XMC, a model-less multivariable control technology that provides faster, lower-cost, and lower-maintenance process control compared to traditional model-based solutions. My contributions enhance system functionality and expand operator capabilities, improving overall performance.
+						<br><br>
+						Overall, my role at Lin & Associates combines deep technical expertise, problem-solving, and close collaboration with customers to deliver reliable, modern, and high-impact control system solutions.
+					</p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+					<div class="flex flex-wrap justify-center gap-4 mb-6">
+						<a href="LNA2.png" class="glightbox">
+							<img src="LNA2.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg">
+						</a>
+						<a href="LNA.png" class="glightbox">
+							<img src="LNA.png" alt="Lin & Associates project" class="h-64 object-contain rounded-lg shadow-md">
+						</a>
+					</div>
+                </div>
+            </section>
+
+            <div class="section-divider my-12"></div>
+
+            <!-- Capstone Project -->
+            <section class="mb-20 scroll-reveal">
+                <div class="experience-card p-8 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Capstone Project</h2>
+                        <span class="text-accent font-medium">Arizona State University | 2023</span>
+                    </div>
+                    <p class="mb-6">
+                        For my year-long capstone at Arizona State University, I worked with Medecipher Solutions, a company dedicated to improving clinical operations in hospitals through advanced decision-support tools. Medecipher identified a critical challenge: nurse schedulers lacked an efficient, intuitive platform for creating balanced staffing plans, resulting in understaffing, burnout, and inconsistent patient care. Our goal was to develop a simple, data-driven solution capable of optimizing staffing decisions at both the daily and hourly levels.
+                        <br><br>
+                        I contributed to key components, including dashboards visualizing nurse staffing patterns, net staffing levels, and surplus/shortfall charts pulled directly from the database. For example, Net Staffing and Surplus/Shortfall visualizations (Figures 1.0 and 1.1) provide schedulers insight into staffing imbalances by highlighting active nurses versus those on breaks and showing staffing deviations.
+                        <br><br>
+                        I also designed and implemented the Rapid ROI table (Figure 1.2), which tracks FTE types, unproductive rates, FMLA weeks, and patient acuity levels using the Emergency Severity Index (ESI). All inputs integrate a robust data-validation system to ensure accurate analysis.
+                        <br><br>
+                        Additional responsibilities included developing the nurse characteristic table with pop-ups and bulk-upload functionality, implementing dashboard metrics for model runs and forecasting, and building D3.js-powered charts for staffing forecasts, performance statistics, and summary metrics. UI improvements, page refactoring, and styling enhancements were also part of my contributions.
+                        <br><br>
+                        Throughout this project, I strengthened my skills in Angular, D3.js, HTML/CSS, JSON, VSCode, Docker, Node.js, Taiga, and AWS, while gaining experience in creating data-visualization-driven applications for real-world operational challenges.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+						<figure class="flex flex-col items-center">
+							<a href="medecipher_figure1.png" class="glightbox">
+								<img src="medecipher_figure1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+							</a>
+							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.0</figcaption>
+						</figure>
+
+						<figure class="flex flex-col items-center">
+							<a href="medecipher_figure1.1.png" class="glightbox">
+								<img src="medecipher_figure1.1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+							</a>
+							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.1</figcaption>
+						</figure>
+
+						<figure class="flex flex-col items-center">
+							<a href="medecipher_figure1.2.png" class="glightbox">
+								<img src="medecipher_figure1.2.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
+							</a>
+							<figcaption class="mt-2 text-sm text-gray-700">Figure 1.2</figcaption>
+						</figure>
+					</div>
+                </div>
+            </section>
+
+            <div class="section-divider my-12"></div>
+
+            <!-- Dizpot -->
+            <section class="mb-20 scroll-reveal">
+                <div class="experience-card p-8 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Dizpot</h2>
+                        <span class="text-accent font-medium">Full-Stack Developer Intern | Summer 2021</span>
+                    </div>
+                    <p class="mb-6">
+                        At Dizpot, I contributed to the design and implementation of full-stack software solutions supporting business objectives and improving operational efficiency. I developed and tested websites and internal applications using MVC architecture, PHP, MySQL, JavaScript, HTML/CSS, and Linux, ensuring reliable performance and a smooth user experience.
+                        <br><br>
+                        In addition to full-stack development, I maintained the company’s WordPress e-commerce platform, implementing SEO strategies, performance optimizations, and design enhancements to improve visibility, usability, and customer engagement. I collaborated with team members to troubleshoot issues, streamline workflows, and deliver updates aligned with evolving business needs.
+                        <br><br>
+                        Through this experience, I strengthened my skills in front-end and back-end development, testing, debugging, and deploying web applications in a professional environment, balancing technical requirements with business objectives to deliver practical software solutions.
+                    </p>
+                </div>
+            </section>
+
+            <div class="section-divider my-12"></div>
+
+            <!-- PVUSD Women & Information Technology -->
+            <section class="scroll-reveal">
+                <div class="experience-card p-8">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold md:mr-8">PVUSD Women & Information Technology</h2>
+                        <span class="text-accent font-medium">Computer Science Intern | Summer 2018</span>
+                    </div>
+                    <p class="mb-6">
+                        During my time with PVUSD Women & Information Technology, I partnered with Google employees to present and demonstrate Jamboards to diverse audiences, providing educators hands-on experience with collaborative technology. I taught teachers how to integrate Bootstrap Algebra into their curriculum, blending mathematical and programming principles to create interactive learning experiences.
+                        <br><br>
+                        I also explored Python and Java programming languages and worked with Raspberry Pi hardware, building hands-on exercises for educators and students to engage with computing concepts.
+                        <br><br>
+                        Through this experience, I strengthened technical expertise while developing the ability to communicate complex concepts clearly, adapt content for diverse audiences, and apply programming skills in educational settings.
+                    </p>
+                    <div class="flex justify-center">
+                        <a href="PVUSD.png" class="glightbox">
+                            <img src="PVUSD.png" alt="PVUSD WIT" class="w-full max-w-md h-auto object-contain rounded-lg">
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </section>
+    </main>
 
-    <div class="section-divider my-12"></div>
-
-    <!-- Capstone Project -->
-    <section class="mb-20 scroll-reveal">
-      <div class="experience-card p-8 mb-8">
-        <div class="flex flex-col md:flex-row md:items-center mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Capstone Project</h2>
-          <span class="text-accent font-medium">Arizona State University | 2023</span>
+    <footer class="py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2023 Jenna Orr. All rights reserved.</p>
         </div>
-        <p class="mb-6">
-          For my year-long capstone at Arizona State University, I worked with Medecipher Solutions, improving nurse staffing decision support through dashboards, visualizations, and data-driven tables. I implemented Rapid ROI tables, nurse characteristic tables with pop-ups and bulk-upload functionality, and D3.js-powered charts for staffing forecasts and performance metrics.
-          <br><br>
-          Technologies used: Angular, D3.js, HTML/CSS, JSON, VSCode, Docker, Node.js, Taiga, AWS.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-6">
-          <figure class="flex flex-col items-center">
-            <a href="medecipher_figure1.png" class="glightbox">
-              <img src="medecipher_figure1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-            </a>
-            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.0</figcaption>
-          </figure>
+    </footer>
 
-          <figure class="flex flex-col items-center">
-            <a href="medecipher_figure1.1.png" class="glightbox">
-              <img src="medecipher_figure1.1.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-            </a>
-            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.1</figcaption>
-          </figure>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.scroll-reveal', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 800,
+            interval: 100
+        });
 
-          <figure class="flex flex-col items-center">
-            <a href="medecipher_figure1.2.png" class="glightbox">
-              <img src="medecipher_figure1.2.png" alt="Capstone project" class="w-full sm:w-80 h-auto object-contain rounded-lg shadow-md">
-            </a>
-            <figcaption class="mt-2 text-sm text-gray-700">Figure 1.2</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider my-12"></div>
-
-    <!-- Dizpot -->
-    <section class="mb-20 scroll-reveal">
-      <div class="experience-card p-8 mb-8">
-        <div class="flex flex-col md:flex-row md:items-center mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">Dizpot</h2>
-          <span class="text-accent font-medium">Full-Stack Developer Intern | Summer 2021</span>
-        </div>
-        <p class="mb-6">
-          At Dizpot, I contributed to full-stack software solutions using MVC, PHP, MySQL, JavaScript, HTML/CSS, and Linux. Maintained WordPress e-commerce platform, implemented SEO improvements, performance optimizations, and design enhancements. Strengthened front-end/back-end development, testing, debugging, and deployment skills in a professional environment.
-        </p>
-      </div>
-    </section>
-
-    <div class="section-divider my-12"></div>
-
-    <!-- PVUSD Women & Information Technology -->
-    <section class="scroll-reveal">
-      <div class="experience-card p-8">
-        <div class="flex flex-col md:flex-row md:items-center mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold md:mr-8">PVUSD Women & Information Technology</h2>
-          <span class="text-accent font-medium">Computer Science Intern | Summer 2018</span>
-        </div>
-        <p class="mb-6">
-          Partnered with Google employees to demonstrate Jamboards to educators, taught Bootstrap Algebra integration, explored Python and Java, and worked with Raspberry Pi hardware. Strengthened technical expertise and communication skills for diverse audiences.
-        </p>
-        <div class="flex justify-center">
-          <a href="PVUSD.png" class="glightbox">
-            <img src="PVUSD.png" alt="PVUSD WIT" class="w-full max-w-md h-auto object-contain rounded-lg">
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<footer class="py-8 text-center bg-[#DDDAD3]">
-  <div class="container mx-auto px-6">
-    <p>&copy; 2025 Jenna Orr. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script>
-  ScrollReveal().reveal('.scroll-reveal', {
-    delay: 200,
-    distance: '50px',
-    origin: 'bottom',
-    duration: 800,
-    interval: 100
-  });
-
-  const lightbox = GLightbox({ selector: '.glightbox' });
-</script>
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
+    </script>
 </body>
 </html>
